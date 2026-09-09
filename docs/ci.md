@@ -2,13 +2,21 @@
 
 This matches Signal K practice. Do not treat `npm test` as a laptop-only habit.
 
-## What upstream does
+## How Signal K already tests
 
-**Server** — [`signalk-server` `test.yml`](https://github.com/SignalK/signalk-server/blob/master/.github/workflows/test.yml) runs on every `pull_request` and on push to `master`.
+Yes — tests are meant to run on GitHub for PRs.
 
-**Plugins (simple)** — e.g. `signalk-to-nmea2000`: `pull_request` + push to `master`, Node matrix, `npm install`, `npm test`.
+| Repo | What runs |
+|---|---|
+| [signalk-server](https://github.com/SignalK/signalk-server/blob/master/.github/workflows/test.yml) | On `pull_request` and push to `master`: install, build, `npm test` (Node 22 and 24). |
+| Typical plugins (e.g. [signalk-to-nmea2000](https://github.com/sbender9/signalk-to-nmea2000/blob/master/.github/workflows/main.yml)) | On `pull_request` and push to `master`: `npm install` and `npm test` on a Node matrix. |
+| Official plugin path | Reusable workflow [`plugin-ci.yml`](https://github.com/SignalK/signalk-server/blob/master/.github/workflows/plugin-ci.yml). Docs: [Plugin CI/CD](https://github.com/SignalK/signalk-server/blob/master/docs/develop/plugins/ci.md). Default `test-command` is `npm test`. Also validates schema, lifecycle, and App Store install even if you have no tests. |
 
-**Plugins (official reusable workflow)** — documented at [Plugin CI/CD](https://github.com/SignalK/signalk-server/blob/master/docs/develop/plugins/ci.md). One caller file in the plugin:
+A plugin with only `"test": "echo Error"` will not catch regressions. A plugin with `node --test` (or similar) plus a workflow **will** fail the PR when tests fail — that is the intended gate.
+
+## What to add
+
+**Plugins (official reusable workflow)** — one caller file in the plugin:
 
 ```yaml
 name: SignalK Plugin CI
