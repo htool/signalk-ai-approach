@@ -9,7 +9,7 @@ Drop these in the plugin repo. Keep them short. They are for the next agent, not
 | `docs/architecture.md` | Current behaviour (update when code lands) |
 | `docs/adr/00N-….md` | One decision per file. Status: accepted → implemented |
 | `docs/features.md` | Ordered slices. Done-when. **Tests on every feature slice.** |
-| `docs/known-gaps.md` | Honest leftovers |
+| `docs/known-gaps.md` | Honest leftovers. Include workarounds that wait on a `signalk-server` decision, and that the next agent must check. |
 | `skills/<domain>/SKILL.md` | Do / do not for this plugin |
 
 Docs-only slices (the kit itself) do not change `index.js`. Feature slices do, and they include tests.
