@@ -21,7 +21,7 @@ Signal K server is large. A plugin is small. Agents that start from the server t
 
 ## Quick start for a plugin
 
-1. Put an `AGENTS.md` in the plugin that points here and lists the local kit files.
+1. Copy [templates/AGENTS.md](templates/AGENTS.md) into the plugin as `AGENTS.md`. Fill it for that codebase and **confirm with the human** before it is law. When setting up the rest of the [plugin kit](docs/plugin-kit.md), check other AI-oriented markdown for conflicts.
 2. Every **feature slice** includes tests in its done-when. Put testable logic in a small module (e.g. `lib/`) and run `npm test` before the code commit.
 3. Add `.github/workflows/signalk-ci.yml` that calls Signal K’s reusable plugin CI (see [CI](docs/ci.md)). Floor: `npm test` on `pull_request`.
 4. Open PRs against **upstream** (`sbender9/…`, `SignalK/…`), not only your fork. Sync the fork from parent **before** you treat your commits as the delta.

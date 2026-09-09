@@ -1,10 +1,10 @@
 # Plugin kit
 
-Drop these in the plugin repo. Keep them short. They are for the next agent, not a blog.
+Start from [templates/AGENTS.md](../templates/AGENTS.md): copy it to the plugin root as `AGENTS.md`. Then add the rest of this kit. Keep files short. They are for the next agent, not a blog.
 
 | File | Role |
 |---|---|
-| `AGENTS.md` | Index. Link [the approach](https://github.com/htool/signalk-ai-approach). Rules. Next slice. |
+| `AGENTS.md` | Index. Link [the approach](https://github.com/htool/signalk-ai-approach). Rules. Next slice. Copy from [templates/AGENTS.md](../templates/AGENTS.md). |
 | `README.md` | Human + agent scope card: job, in, out, not |
 | `docs/architecture.md` | Current behaviour (update when code lands) |
 | `docs/adr/00N-….md` | One decision per file. Status: accepted → implemented |
