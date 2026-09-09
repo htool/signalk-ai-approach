@@ -2,7 +2,7 @@
 
 A way to use an AI coding agent on [Signal K](https://signalk.org) **plugins** without dumping the server into context, and without shipping untested PRs.
 
-This is documentation only. It is not a plugin and not a fork of `signalk-server`.
+This is a **standalone public repo** (docs only). It is not a plugin and not a fork of `signalk-server`. Point a plugin’s `AGENTS.md` here; do not copy these pages into every plugin tree.
 
 **If you are an agent:** read this README, then the plugin’s own `AGENTS.md`. Do not load `signalk-server` source unless a client contract is actually undefined.
 
