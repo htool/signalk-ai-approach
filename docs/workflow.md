@@ -20,7 +20,7 @@ On a branch from **synced** `master`/`main`:
 
 1. ADR + features slice (**no plugin code**).
 2. Code + **tests** for that slice (`npm test` green).
-3. PR to origin. Do not bump `package.json` version (maintainers publish).
+3. PR to origin. Do not bump `package.json` version (maintainers publish). Then [check CI and review comments](prs.md#after-you-open-it); update the PR if code must change.
 
 ## 4. Tests are part of the feature
 

@@ -41,6 +41,7 @@ Prefer this caller over a one-off `npm test` job when you can. If `plugin-ci.yml
 - `package.json` `"test"` must run the suite (not `echo Error`).
 - A workflow on `pull_request` must run that script.
 - Feature work is not done until CI would catch a regression of that feature.
+- After opening a PR, confirm the workflow actually passed. Review comments: [Pull requests](prs.md).
 
 ## Cerbo / Pi
 

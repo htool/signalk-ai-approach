@@ -16,7 +16,7 @@ Signal K server is large. A plugin is small. Agents that start from the server t
 2. [Plugin kit](docs/plugin-kit.md) — `AGENTS.md`, ADRs, features, gaps, skills
 3. [Workflow](docs/workflow.md) — sync the fork, docs commit, then code + tests
 4. [CI](docs/ci.md) — GitHub Actions on every PR
-5. [Pull requests](docs/prs.md) — Signal K PR hygiene
+5. [Pull requests](docs/prs.md) — Signal K PR hygiene; after open, confirm tests passed and read comments
 6. [Server vs plugin](docs/server-boundary.md) — ask before treating a missing server API as a plugin-only fact
 
 ## Quick start for a plugin
