@@ -13,7 +13,7 @@ Use six layers, on the **plugin** (or a small set of plugins), in this order:
 | 5. Gaps | `docs/known-gaps.md` | Bugs and out of scope. Do not “fix” these in the current slice |
 | 6. Skills | `skills/*/SKILL.md` | How to change this domain without breaking clients |
 
-If the agent cannot implement a slice from those files, **fix the docs** — do not grow the prompt or paste the server.
+If the agent cannot implement a slice from those files, **fix the docs** — do not grow the prompt or paste the server. Growing `AGENTS.md` to hide a thin map is the same mistake as [wrapping friction in a new abstraction](principles.md).
 
 If the slice needs a **server** behaviour that is not a documented path or `app.*` method, follow [Server vs plugin](server-boundary.md). Ask the human; do not dump `signalk-server`. Do not crawl the plugin registry by keyword.
 
