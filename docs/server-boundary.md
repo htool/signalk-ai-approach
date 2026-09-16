@@ -10,9 +10,22 @@ Ask this before coding:
 > (example: App Store and server-update already probe npm).
 > Should this be a `signalk-server` capability, not a one-plugin hack?
 
-If **yes or unsure:** stop and **ask the human** whether to open or wait on an upstream issue. Do not open a `signalk-server` issue yourself unless they say so.
+If **yes or unsure:** stop and **ask the human** whether to open or wait on an upstream issue or RFC. Do not open it yourself unless they say so. If other plugins will share the contract, see below.
 
 If **no** (boat-local, one plugin, no shared probe): implement in the plugin only.
+
+## Shared contracts: RFC, not a plugin spec
+
+If **other plugins or apps will target the same schema or API** (a new resource type, a v2 API, a path many writers need), that contract is not a plugin ADR. A private REST API, token mint, or custom resource schema shipped as fait accompli is [hiding friction](principles.md).
+
+Ask the human whether to open or wait on an upstream RFC. Do not open it yourself unless they say so.
+
+| What | Where |
+|---|---|
+| Schema, data model, “is this a resource or a v2 API?” | RFC on [SignalK/specification](https://github.com/SignalK/specification) ([CONTRIBUTING](https://github.com/SignalK/specification/blob/master/CONTRIBUTING.md); [issue 264](https://github.com/SignalK/specification/issues/264) is the format) |
+| Server mechanics (`app.*`, Resources ids/POST, `getFeatures()`) | Issue on [SignalK/signalk-server](https://github.com/SignalK/signalk-server) |
+
+A custom resource type can ship without a spec change. That is not consensus. Implementing against a **draft RFC** is the workaround below. Treating the plugin’s schema as the spec is how competing private APIs proliferate.
 
 ## Meanwhile
 

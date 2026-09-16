@@ -2,7 +2,7 @@
 
 This plugin: <!-- one sentence: job, and what it does not do. -->
 
-Follow [Signal K AI approach](https://github.com/htool/signalk-ai-approach), including the [engineering principles](https://github.com/htool/signalk-ai-approach/blob/main/docs/principles.md). Do not copy those pages into this tree. Do not load `signalk-server` `src/` unless a client contract is undefined.
+Follow [Signal K AI approach](https://github.com/htool/signalk-ai-approach), including the [engineering principles](https://github.com/htool/signalk-ai-approach/blob/main/docs/principles.md). **Before a task**, ensure that approach is current (`main`: clone, `git pull`, or read on GitHub). Do not use a previous chat’s copy. Do not copy those pages into this tree. Do not load `signalk-server` `src/` unless a client contract is undefined.
 
 ## Fill this file
 

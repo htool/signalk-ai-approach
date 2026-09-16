@@ -2,6 +2,8 @@
 
 Do not load `signalk-server` into the agent context “for orientation.” A plugin’s contract is paths, deltas, and maybe NMEA via converters — not the server’s Express internals.
 
+**First:** retrieve [this approach](https://github.com/htool/signalk-ai-approach) from **`main`** (clone, `git pull`, or read on GitHub). A link in `AGENTS.md` is not a fetch. Do not use a previous chat’s copy.
+
 Use six layers, on the **plugin** (or a small set of plugins), in this order:
 
 | Layer | In the plugin | Role |
