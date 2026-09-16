@@ -4,7 +4,7 @@ A way to use an AI coding agent on [Signal K](https://signalk.org) **plugins** w
 
 This is a **standalone public repo** (docs only). It is not a plugin and not a fork of `signalk-server`. Point a plugin’s `AGENTS.md` here; do not copy these pages into every plugin tree.
 
-**If you are an agent:** read this README, then [engineering principles](docs/principles.md), then the plugin’s own `AGENTS.md`. Do not load `signalk-server` source unless a client contract is actually undefined. If a needed fact looks like something the server already probes (App Store, updates), follow [Server vs plugin](docs/server-boundary.md): ask the human; meanwhile workaround and note it in known-gaps.
+**If you are an agent:** first ensure this approach is current — [htool/signalk-ai-approach](https://github.com/htool/signalk-ai-approach) **`main`** (clone, `git pull`, or read on GitHub). Then this README, [engineering principles](docs/principles.md), then the plugin’s own `AGENTS.md`. Do not load `signalk-server` source unless a client contract is actually undefined. If a needed fact looks like something the server already probes (App Store, updates), follow [Server vs plugin](docs/server-boundary.md): ask the human; meanwhile workaround and note it in known-gaps.
 
 ## Why
 
@@ -15,14 +15,14 @@ Signal K server is large. A plugin is small. Agents that start from the server t
 1. [Engineering principles](docs/principles.md) — do not wrap friction; specialize when reuse is wrong
 2. [Retrieve, don’t dump](docs/retrieve.md) — six layers instead of the server tree
 3. [Plugin kit](docs/plugin-kit.md) — `AGENTS.md`, ADRs, features, gaps, skills
-4. [Workflow](docs/workflow.md) — sync the fork, docs commit, then code + tests
+4. [Workflow](docs/workflow.md) — current approach, sync the fork, docs commit, then code + tests
 5. [CI](docs/ci.md) — GitHub Actions on every PR
 6. [Pull requests](docs/prs.md) — Signal K PR hygiene; after open, confirm tests passed and read comments
-7. [Server vs plugin](docs/server-boundary.md) — ask before treating a missing server API as a plugin-only fact
+7. [Server vs plugin](docs/server-boundary.md) — ask before treating a missing server API as a plugin-only fact; shared contracts need an RFC
 
 ## Quick start for a plugin
 
-1. Copy [templates/AGENTS.md](templates/AGENTS.md) into the plugin as `AGENTS.md`. Fill it for that codebase and **confirm with the human** before it is law. When setting up the rest of the [plugin kit](docs/plugin-kit.md), check other AI-oriented markdown for conflicts.
+1. Retrieve [this approach](https://github.com/htool/signalk-ai-approach) from **`main`**. Then copy [templates/AGENTS.md](templates/AGENTS.md) into the plugin as `AGENTS.md`. Fill it for that codebase and **confirm with the human** before it is law. When setting up the rest of the [plugin kit](docs/plugin-kit.md), check other AI-oriented markdown for conflicts.
 2. Every **feature slice** includes tests in its done-when. Put testable logic in a small module (e.g. `lib/`) and run `npm test` before the code commit.
 3. Add `.github/workflows/signalk-ci.yml` that calls Signal K’s reusable plugin CI (see [CI](docs/ci.md)). Floor: `npm test` on `pull_request`.
 4. Open PRs against **upstream** (`sbender9/…`, `SignalK/…`), not only your fork. Sync the fork from parent **before** you treat your commits as the delta.
