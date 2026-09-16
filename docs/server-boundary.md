@@ -1,6 +1,6 @@
 # Server vs plugin
 
-Do not load `signalk-server` source “for orientation.” If a **client contract is undefined** (no path, no plugin API, no documented behaviour), do not invent a private workaround and treat it as the design.
+Do not load `signalk-server` source “for orientation.” If a **client contract is undefined** (no path, no plugin API, no documented behaviour), do not invent a private workaround and treat it as the design. Wrapping that hole in a plugin facade is [hiding friction](principles.md).
 
 ## When the hole might belong in the server
 

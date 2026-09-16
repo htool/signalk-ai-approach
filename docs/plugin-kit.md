@@ -4,7 +4,7 @@ Start from [templates/AGENTS.md](../templates/AGENTS.md): copy it to the plugin 
 
 | File | Role |
 |---|---|
-| `AGENTS.md` | Index. Link [the approach](https://github.com/htool/signalk-ai-approach). Rules. Next slice. Copy from [templates/AGENTS.md](../templates/AGENTS.md). |
+| `AGENTS.md` | Index. Link [the approach](https://github.com/htool/signalk-ai-approach) ([engineering principles](https://github.com/htool/signalk-ai-approach/blob/main/docs/principles.md)). Rules. Next slice. Copy from [templates/AGENTS.md](../templates/AGENTS.md). |
 | `README.md` | Human + agent scope card: job, in, out, not |
 | `docs/architecture.md` | Current behaviour (update when code lands) |
 | `docs/adr/00N-….md` | One decision per file. Status: accepted → implemented |
