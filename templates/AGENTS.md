@@ -22,7 +22,7 @@ Keep this file an index. Detail lives in `docs/` and skills, loaded on demand.
 
 1. [README.md](README.md) — scope card (job, in, out)
 2. [docs/architecture.md](docs/architecture.md)
-3. [docs/adr/](docs/adr/) — locked decisions
+3. [docs/adr/](docs/adr/) — locked decisions for this plugin. Shared Signal K ADRs and open RFCs are in the approach repo (`docs/decisions.md`, `docs/rfcs.md`), not here.
 4. [docs/features.md](docs/features.md) — next pending slice only
 5. [docs/known-gaps.md](docs/known-gaps.md) — do not invent these here
 6. Then plugin source — never import `signalk-server` `src/`

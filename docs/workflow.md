@@ -16,7 +16,7 @@ If you work on a GitHub fork, **update it from the parent before you measure you
 
 Summarize fork-only behaviour vs synced parent. Ask what to reapply. Drop boat-local hacks and `bla` commits. One logical PR per topic.
 
-If a missing contract looks like a **shared server** concern, follow [Server vs plugin](server-boundary.md) before coding the plugin workaround.
+If a missing contract looks like a **shared** concern, follow [Server vs plugin](server-boundary.md) before coding the plugin workaround. Check [RFCs](rfcs.md) and the GitHub search documented there. Add the issue to that list if it is missing. Do not treat the row as the spec.
 
 ## 4. Docs commit, then code
 

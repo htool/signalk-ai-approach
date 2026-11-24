@@ -7,7 +7,7 @@ Start from [templates/AGENTS.md](../templates/AGENTS.md): copy it to the plugin 
 | `AGENTS.md` | Index. Link [the approach](https://github.com/htool/signalk-ai-approach) ([engineering principles](https://github.com/htool/signalk-ai-approach/blob/main/docs/principles.md)); retrieve `main` before a task. Rules. Next slice. Copy from [templates/AGENTS.md](../templates/AGENTS.md). |
 | `README.md` | Human + agent scope card: job, in, out, not |
 | `docs/architecture.md` | Current behaviour (update when code lands) |
-| `docs/adr/00N-….md` | One decision per file. Status: accepted → implemented |
+| `docs/adr/00N-….md` | One decision per file, for this plugin. Status: accepted → implemented. Project ADRs and open RFCs stay in the approach repo: [decisions](https://github.com/htool/signalk-ai-approach/blob/main/docs/decisions.md), [rfcs](https://github.com/htool/signalk-ai-approach/blob/main/docs/rfcs.md). Do not copy them here. |
 | `docs/features.md` | Ordered slices. Done-when. **Tests on every feature slice.** |
 | `docs/known-gaps.md` | Honest leftovers. Include workarounds that wait on a `signalk-server` decision, and that the next agent must check. |
 | `skills/<domain>/SKILL.md` | Do / do not for this plugin |

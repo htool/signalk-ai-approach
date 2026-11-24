@@ -18,14 +18,43 @@ If **no** (boat-local, one plugin, no shared probe): implement in the plugin onl
 
 If **other plugins or apps will target the same schema or API** (a new resource type, a v2 API, a path many writers need), that contract is not a plugin ADR. A private REST API, token mint, or custom resource schema shipped as fait accompli is [hiding friction](principles.md).
 
-Ask the human whether to open or wait on an upstream RFC. Do not open it yourself unless they say so.
+Ask the human whether to open or wait on an upstream RFC. Do not open it yourself unless they say so. If they say open it, also draft a short Discord announce and a GitHub @mention list (see below).
+
+Before drafting, read [Decisions](decisions.md) and [RFCs](rfcs.md). Decisions are the ADR log (accepted or rejected). RFCs are the open issues, wherever they were filed (specification, server, or a plugin). An open issue is not the spec. A merged PR is, even when the issue was left open.
+
+If the RFC is missing from [RFCs](rfcs.md), add a row: date, issue link, title. Do not paste the body. The issue is the reference. When it is accepted or rejected, write the outcome in [Decisions](decisions.md) and delete the row.
 
 | What | Where |
 |---|---|
 | Schema, data model, “is this a resource or a v2 API?” | RFC on [SignalK/specification](https://github.com/SignalK/specification) ([CONTRIBUTING](https://github.com/SignalK/specification/blob/master/CONTRIBUTING.md); [issue 264](https://github.com/SignalK/specification/issues/264) is the format) |
-| Server mechanics (`app.*`, Resources ids/POST, `getFeatures()`) | Issue on [SignalK/signalk-server](https://github.com/SignalK/signalk-server) |
+| Server mechanics (`app.*`, Resources ids/POST, `getFeatures()`) | RFC or issue on [SignalK/signalk-server](https://github.com/SignalK/signalk-server) |
+| A contract that starts in one plugin and other plugins must share | RFC on that plugin’s repo, and a row in [RFCs](rfcs.md) |
 
 A custom resource type can ship without a spec change. That is not consensus. Implementing against a **draft RFC** is the workaround below. Treating the plugin’s schema as the spec is how competing private APIs proliferate.
+
+## After the RFC exists: announce and notify
+
+The GitHub issue is the contract. Discord is a pointer, not a second copy of the design. Do **not** post to Discord or open the RFC yourself unless the human says so. Draft the texts; they paste.
+
+**Discord announce** — a few lines, then the issue URL. No 26 KB paste.
+
+```
+RFC: <one-line title>
+<issue URL>
+<one sentence: who else should care and why>
+```
+
+**Where to post:** [Signal K Discord](https://discord.gg/uuZrwz4dCS). Not `#help` (that is support; the invite lands there). Use the development discussion channel. Server docs link [this channel](https://discord.com/channels/1170433917761892493/1170433918592368684) as community chat. Tell the human that place by name; they post.
+
+**GitHub notify** — @mention a few people who already own the overlap, using their **GitHub** usernames (repo owner, CODEOWNERS, or named maintainers of the two or three plugins / the server module). Not a `git shortlog` of `signalk-server`. Not invented handles.
+
+Put the @mentions in the RFC body, or as a **first comment** whose only job is the ping (better on a long RFC so they get notified without wading through the design):
+
+```
+Flagging for eyes: @alice (resources API), @bob (signalk-logbook).
+```
+
+Same cap as [retrieve overlap](#how-to-retrieve-overlap-narrowly): a handful of named people, then stop.
 
 ## Meanwhile
 
