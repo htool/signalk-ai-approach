@@ -19,6 +19,8 @@ Signal K server is large. A plugin is small. Agents that start from the server t
 5. [CI](docs/ci.md) — GitHub Actions on every PR
 6. [Pull requests](docs/prs.md) — Signal K PR hygiene; after open, confirm tests passed and read comments
 7. [Server vs plugin](docs/server-boundary.md) — ask before treating a missing server API as a plugin-only fact; shared contracts need an RFC
+8. [Decisions](docs/decisions.md) — ADR log: RFCs that were accepted or rejected
+9. [RFCs](docs/rfcs.md) — open RFCs, one link each; move a row to Decisions when it is settled
 
 ## Quick start for a plugin
 
